@@ -85,14 +85,13 @@ body {
 .header .links {
   position: relative;
 }
-.header .links:hover .icons span:nth-child(2) {
-  width: 100%;
-}
 .header .links .icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   width: 35px;
+  cursor: pointer;
+  position: relative;
 }
 .header .links .icons span {
   height: 3px;
@@ -106,6 +105,9 @@ body {
   background-color: #222;
   width: 60%;
   transition: var(--main-duration);
+}
+.header .links:hover .icons span:nth-child(2) {
+  width: 100%;
 }
 .header .links .icons span:last-child {
   background-color: #222;
@@ -147,9 +149,34 @@ body {
   padding-left: 25px;
   font-weight: 600;
 }
-.header .links:hover ul {
-  display: block;
-}
+/* Closing icons */
+  .closing-icon {
+    display: none;
+    height: 14px;
+    cursor: pointer;
+    position: relative;
+    width: 35px;
+  }
+  .closing-icon span {
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: #222;
+    width: 100%;
+    position: absolute;
+  }
+  .closing-icon span:first-child,
+  .closing-icon span:first-child {
+    top: 0;
+  }
+  .closing-icon span:first-child {
+    transform: rotate(45deg);
+  }
+  .closing-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .closing-icon span:last-child {
+    transform: rotate(-45deg);
+  }
 /* End Header */
 /* Start Landing Section */
 .landing {
