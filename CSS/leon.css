@@ -146,7 +146,7 @@ body {
   transition: var(--main-duration);
 }
 .header .links ul a:hover {
-  padding-left: 25px;
+  padding-left: 10px;
   font-weight: 600;
 }
 /* Closing icons */
